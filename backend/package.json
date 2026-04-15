@@ -1,0 +1,41 @@
+{
+  "name": "carolina-nail-design-backend",
+  "version": "1.0.0",
+  "description": "Backend API para Carolina Nail Design",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:backup": "node -e \"require('./src/services/BackupService').createFullBackup().then(d => require('./src/services/BackupService').saveBackupToFile(d))\"",
+    "backup:now": "node -e \"require('dotenv').config(); const bs = require('./src/services/BackupService'); bs.createFullBackup().then(d => bs.saveBackupToFile(d)).then(() => console.log('Backup manual criado'))\""
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "pg": "^8.10.0",
+    "sequelize": "^6.35.0",
+    "jsonwebtoken": "^9.0.2",
+    "bcryptjs": "^2.4.3",
+    "joi": "^17.10.0",
+    "express-async-errors": "^3.1.1",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.9.6",
+    "node-schedule": "^2.1.1",
+    "googleapis": "^118.0.0",
+    "google-auth-library": "^8.9.0",
+    "aws-sdk": "^2.1500.0",
+    "csv-stringify": "^6.4.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "jest": "^29.7.0",
+    "supertest": "^6.3.3"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

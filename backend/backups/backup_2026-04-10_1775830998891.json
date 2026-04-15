@@ -1,0 +1,95 @@
+{
+  "timestamp": "2026-04-10T14:23:18.054Z",
+  "version": 1,
+  "data": {
+    "users": [
+      {
+        "id": "5cfc7a05-03b6-493b-8cd8-523c1cb0affc",
+        "name": "Test User",
+        "email": null,
+        "phone": "11987654321",
+        "password": "$2a$10$NgHNNVBbx8tNs/7BesMBeehRNv811j49AaxZ/Mgy01Rw87HpI8kTO",
+        "role": "client",
+        "profileImage": null,
+        "isActive": true,
+        "lastLogin": null,
+        "createdAt": "2026-04-10T01:50:27.330Z",
+        "updatedAt": "2026-04-10T01:50:27.330Z"
+      },
+      {
+        "id": "af8707b8-6939-4e54-b0f7-783326c53fb7",
+        "name": "Test User 1775785855903",
+        "email": null,
+        "phone": "119985855903",
+        "password": "$2a$10$YNlY3/DQec6RHCRla1q9Xe8lAWamglXPd.4fvXQlL3AviY4bJAK02",
+        "role": "client",
+        "profileImage": null,
+        "isActive": true,
+        "lastLogin": null,
+        "createdAt": "2026-04-10T01:50:55.929Z",
+        "updatedAt": "2026-04-10T01:50:55.929Z"
+      },
+      {
+        "id": "66679e25-8aad-4181-ade2-fd1808ab4987",
+        "name": "Pedro",
+        "email": null,
+        "phone": "48991122106",
+        "password": "$2a$10$SpkcDcy8yk1hRn8wK/NHpuw46X9Fsbiu6vMufHeTMwnqVexkseHIa",
+        "role": "client",
+        "profileImage": null,
+        "isActive": true,
+        "lastLogin": "2026-04-10T02:21:34.086Z",
+        "createdAt": "2026-04-10T01:10:11.351Z",
+        "updatedAt": "2026-04-10T02:21:34.087Z"
+      }
+    ],
+    "clients": [
+      {
+        "id": "68d45b80-6f71-4d37-9039-623343f5de17",
+        "userId": "66679e25-8aad-4181-ade2-fd1808ab4987",
+        "birthDate": null,
+        "address": null,
+        "city": null,
+        "state": null,
+        "zipCode": null,
+        "notes": null,
+        "totalSpent": "0.00",
+        "isActive": true,
+        "createdAt": "2026-04-10T01:10:11.513Z",
+        "updatedAt": "2026-04-10T01:10:11.513Z"
+      },
+      {
+        "id": "e693434a-6004-4dd9-8cef-113e84769e04",
+        "userId": "5cfc7a05-03b6-493b-8cd8-523c1cb0affc",
+        "birthDate": null,
+        "address": null,
+        "city": null,
+        "state": null,
+        "zipCode": null,
+        "notes": null,
+        "totalSpent": "0.00",
+        "isActive": true,
+        "createdAt": "2026-04-10T01:50:27.454Z",
+        "updatedAt": "2026-04-10T01:50:27.454Z"
+      },
+      {
+        "id": "d8c87b22-5159-412e-bed8-772011e427cd",
+        "userId": "af8707b8-6939-4e54-b0f7-783326c53fb7",
+        "birthDate": null,
+        "address": null,
+        "city": null,
+        "state": null,
+        "zipCode": null,
+        "notes": null,
+        "totalSpent": "0.00",
+        "isActive": true,
+        "createdAt": "2026-04-10T01:50:56.054Z",
+        "updatedAt": "2026-04-10T01:50:56.054Z"
+      }
+    ],
+    "services": [],
+    "appointments": [],
+    "transactions": [],
+    "notifications": []
+  }
+}

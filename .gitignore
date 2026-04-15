@@ -1,0 +1,75 @@
+# Arquivo .gitignore para Carolina Nail Design
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Backend
+backend/dist/
+backend/build/
+backend/.nyc_output/
+backend/coverage/
+
+# Frontend/Expo
+frontend/.expo/
+frontend/.expo-shared/
+frontend/dist/
+frontend/build/
+frontend/.eas/
+
+# iOS
+ios/Pods/
+ios/Podfile.lock
+*.xcworkspace/
+
+# Android
+android/.gradle/
+android/build/
+android/.idea/
+
+# Logs
+logs/
+*.log
+lerna-debug.log*
+
+# Temporary
+tmp/
+temp/
+*.tmp
+.cache/
+
+# Database
+*.sqlite
+*.sqlite3
+
+# IDE
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Expo specifics
+.env*.prod
+*.jks
+*.p8
+*.p12
+
+# Build artifacts
+dist/
+build/
+!.gitkeep

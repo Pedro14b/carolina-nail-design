@@ -3,9 +3,8 @@ services:
     name: carolina-nail-design-api
     env: node
     plan: free
-    rootDir: backend
-    buildCommand: npm ci
-    startCommand: npm start
+    buildCommand: if [ -f backend/package.json ]; then npm --prefix backend install; else npm install; fi
+    startCommand: if [ -f backend/src/server.js ]; then node backend/src/server.js; else node src/server.js; fi
     healthCheckPath: /health
     envVars:
       - key: NODE_ENV

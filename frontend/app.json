@@ -1,0 +1,40 @@
+{
+  "expo": {
+    "name": "Carolina Nail Design",
+    "slug": "carolina-nail-design",
+    "version": "1.0.0",
+    "icon": "./src/assets/app-icon.png",
+    "ios": {
+      "icon": "./src/assets/app-icon.png",
+      "supportsTabletMode": true,
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "Usaremos reconhecimento facial para autenticação",
+        "UIDeviceFamily": [
+          1,
+          2
+        ]
+      }
+    },
+    "android": {
+      "icon": "./src/assets/app-icon.png",
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/app-icon.png",
+        "backgroundColor": "#FAF7F5"
+      },
+      "usesCleartextTraffic": true,
+      "permissions": [
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.POST_NOTIFICATIONS"
+      ],
+      "package": "com.pedro_bugs14.carolinanaildesign"
+    },
+    "web": {
+      "favicon": "./src/assets/app-icon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "8714ed29-9111-44c3-86f5-4f97409e6898"
+      }
+    }
+  }
+}

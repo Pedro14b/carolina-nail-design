@@ -4,8 +4,14 @@ import { API_BASE_URL } from '../constants';
 
 const apiClient = axios.create({
   baseURL: API_BASE_URL,
-  timeout: 10000
+  timeout: 30000
 });
+
+const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+const isAuthRequest = (url = '') => {
+  return url.includes('/auth/login') || url.includes('/auth/login-pin') || url.includes('/auth/biometric');
+};
 
 // Interceptor para autenticação
 apiClient.interceptors.request.use(
@@ -26,6 +32,14 @@ apiClient.interceptors.response.use(
     const originalRequest = error.config;
     const requestUrl = originalRequest?.url || '';
     const isAuthRoute = requestUrl.includes('/auth/login') || requestUrl.includes('/auth/login-pin') || requestUrl.includes('/auth/register') || requestUrl.includes('/auth/refresh');
+
+    // Retry curto para reduzir erro de rede quando o backend está voltando de cold start.
+    const shouldRetryNetworkError = !error.response && originalRequest && !originalRequest._networkRetry && isAuthRequest(requestUrl);
+    if (shouldRetryNetworkError) {
+      originalRequest._networkRetry = true;
+      await wait(2500);
+      return apiClient(originalRequest);
+    }
 
     if (error.response?.status === 401 && !originalRequest?._retry && !isAuthRoute) {
       originalRequest._retry = true;

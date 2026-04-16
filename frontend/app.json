@@ -11,6 +11,8 @@
         "NSFaceIDUsageDescription": "Usaremos reconhecimento facial para autenticação",
         "UIDeviceFamily": [
           1,
+          2,
+          1,
           2
         ]
       }
@@ -24,6 +26,8 @@
       "usesCleartextTraffic": true,
       "permissions": [
         "android.permission.USE_BIOMETRIC",
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.USE_BIOMETRIC",
         "android.permission.POST_NOTIFICATIONS"
       ],
       "package": "com.pedro_bugs14.carolinanaildesign"
@@ -35,6 +39,12 @@
       "eas": {
         "projectId": "8714ed29-9111-44c3-86f5-4f97409e6898"
       }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/8714ed29-9111-44c3-86f5-4f97409e6898"
     }
   }
 }
